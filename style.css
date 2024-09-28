@@ -1,0 +1,306 @@
+/* RESETS */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+}
+
+/* COLORS */
+
+:root {
+
+    /* PRIMARY */
+    --Black: hsl(0, 0%, 0%);
+    --white: hsl(0, 0%, 100%);
+    --Cyan: hsl(179, 62%, 43%);
+    --Light--Cyan: hsla(179, 62%, 43%, 0.511);
+    --Bright--Yellow: hsl(71, 73%, 54%);
+
+    /* Neutral */
+    --Light--Gray: hsl(204, 43%, 93%);
+    --Light--Gray--back: hsl(204, 31%, 84%);
+    --Light--Gray--Plus: hsla(203, 38%, 88%, 0.802);
+    --Grayish--Blue: hsl(218, 22%, 67%);
+}
+
+/* --- */
+
+body {
+    font-family: "Karla", sans-serif;
+    background-color: var(--Light--Gray--back);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* GRID */
+
+.Box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, fit-content);
+    scale: calc(1.5);
+}
+
+/* JOIN__THE_COMMUNITY */
+
+.Join {
+    background-color: var(--white);
+    grid-column-start: 1;
+    grid-column-end: 3;
+    padding: 25px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.Join__Title {
+    font-size: 20px;
+    color: var(--Cyan);
+    font-weight: 700;
+    padding-bottom: 10px;
+}
+
+.Join__Sub__Title {
+    font-size: 15px;
+    color: var(--Bright--Yellow);
+    font-weight: 700;
+    padding-bottom: 5px;
+}
+
+.Join__Paragraph {
+    font-size: 13px;
+    color: var(--Grayish--Blue);
+    font-weight: 400;
+    max-width: 60ch;
+}
+
+/* MONTHLY__SUBSCRIPTION */
+
+.Sign {
+    background-color: var(--Cyan);
+    padding: 25px;
+    border-bottom-left-radius: 10px;
+}
+
+.Sign__Title {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--white);
+}
+
+.Sign__Sub__Title {
+    font-size: 25px;
+    font-weight: 700;
+    color: var(--white);
+}
+
+.Sign_Sub__Title__Span {
+    color: var(--Light--Gray--Plus);
+    font-weight: 400;
+    font-size: 10px;
+    padding-left: 5px;
+}
+
+.Sign__Paragraph {
+    font-size: 13px;
+    color: var(--Light--Gray--Plus);
+}
+
+
+.SIGN__Button {
+    display: block;
+    border-style: none;
+    cursor: pointer;
+    background-color: var(--Bright--Yellow);
+    color: var(--white);
+    font-size: 13px;
+    font-weight: 400;
+    padding: 0.8em 1em;
+    width: 95%;
+    border-radius: 5px;
+    margin-top: 25px;
+    transition: all 0.3s ease-in-out;
+
+}
+
+.SIGN__Button:hover {
+    scale: 1.03;
+    box-shadow: 0px 0px 5px aqua, 0px 0px 10px aqua;
+    color: var(--Black);
+}
+
+/* WHY_US */
+
+.Why {
+    border-bottom-right-radius: 10px;
+    padding: 25px;
+    background-color: var(--Light--Cyan);
+}
+
+.WHY__Title {
+    font-size: 15px;
+    color: var(--Light--Gray);
+    font-weight: 700;
+    padding-bottom: 10px;
+}
+
+.WHY__Paragraph {
+    font-size: 10px;
+    color: var(--Light--Gray--Plus);
+    font-weight: 400;
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width:800px) {
+
+    .Box {
+        scale: 1.4;
+    }
+
+}
+
+@media (max-width:750px) {
+
+    .Box {
+        scale: 1.3;
+    }
+
+}
+
+@media (max-width:700px) {
+
+    .Box {
+        scale: 1.2;
+    }
+
+    .WHY__Paragraph {
+        font-size: 11px;
+        font-weight: 700;
+    }
+
+}
+
+@media (max-width:650px) {
+    .Box {
+        scale: 1.2;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    /* JOIN__THE_COMMUNITY */
+
+    .Join {
+        grid-column-start: 1;
+        grid-column-end: 1;
+        padding-right: 0px;
+    }
+
+    .Join__Sub__Title {
+        max-width: 30ch;
+    }
+
+    .Join__Paragraph {
+        max-width: 35ch;
+    }
+
+    .Join__Paragraph__Span {
+        display: block;
+    }
+
+    /* MONTHLY__SUBSCRIPTION */
+
+    .Sign {
+        border-bottom-left-radius: 0px;
+        padding-right: 0px;
+    }
+
+    .Sign__Title {
+        font-size: 17px;
+    }
+
+    .SIGN__Button {
+        font-size: 13px;
+        padding: 0.9em 0.9em;
+        width: 70%;
+        margin-top: 20px;
+    }
+
+    .SIGN__Button:hover {
+        scale: 1.01;
+    }
+
+    /* WHY_US */
+
+.Why {
+    border-bottom-left-radius: 10px;
+}
+
+.WHY__Paragraph {
+    font-size: 11px;
+    font-weight: 700px;
+}
+
+}
+
+@media (max-width:400px) {
+   .Box {
+    width: 290px;
+   }
+}
+
+@media (max-width:360px) {
+
+    .Box {
+        scale: 1.1;
+    }
+
+}
+
+@media (max-width:330px) {
+
+    .Box {
+        scale: 1;
+    }
+
+}
+
+/* SPECIAL */
+
+@media (max-height: 550px) and (min-width: 1280px) {
+    .Join {
+        padding: 15px;
+    }
+
+    .Sign {
+        padding: 15px;
+    }
+
+    .Why {
+        padding: 15px;
+    }
+}
+
+@media (max-height:715px) and (max-width: 700px) {
+    .Box {
+        margin-top: 3rem;
+    }
+}
+
+@media (min-width: 1024px) and (min-height: 750px) {
+    .Box {
+        scale: 1.9;
+    }
+
+    .WHY__Paragraph {
+        font-size: 13px;
+        font-weight: 700;
+    }
+}
